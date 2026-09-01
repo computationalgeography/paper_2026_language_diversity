@@ -38,6 +38,15 @@ PYTHONPATH=source/package/ python environment/script/summarized_plots.py experim
 
 ## Experiment 2
 
+# Loop over each seed
+for seed in "${seeds[@]}"; do
+  ./experiment_2.sh $directory_1/seed_$seed
+done
+
+# Analyze
+directory_2=$output_dir/experiment_2
+./summarize_baseline.sh $directory_2
+./summarize_plots.sh $directory_2
 
 
 
