@@ -10,6 +10,6 @@ fi
 experiment_dir="$1"
 
 # Run the commands with the passed directory
-PYTHONPATH=source/package/ python source/script/leco_model.py run configuration_exp1.toml "${experiment_dir}"
+PYTHONPATH=source/package/ python source/script/leco_model.py run ../configuration/configuration_exp1.toml "${experiment_dir}"
 PYTHONPATH=source/package/ python source/script/leco_model.py cluster "${experiment_dir}/configuration.toml" "${experiment_dir}/" population.gpkg
 PYTHONPATH=source/package/ python source/script/leco_model.py plot "${experiment_dir}/configuration.toml" "${experiment_dir}/" population.gpkg
