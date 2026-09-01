@@ -15,7 +15,7 @@ for seed in seeds; do
 done
 
 # Analyze output
-./analyze_baseline.sh $directory_1
+./summarize_baseline.sh $directory_1
 
 # Test alternative classification configurations
 alternatives=("single_linkage", "complete_linkage", "distance_0.2", "distance_0.4")
@@ -27,6 +27,10 @@ done
 for seed in seeds; do
     ./classification_alternatives.sh seed
 done
+
+for alt in alternatives; do
+  alt_dir=$output_dir/$alt
+  ./summarize_baseline.sh $alt_dir
 
 
 
