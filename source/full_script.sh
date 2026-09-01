@@ -34,7 +34,7 @@ for alt in alternatives; do
   ./summarize_baseline.sh $alt_dir baseline
 done
 
-PYTHONPATH=source/package/ python environment/script/summarized_plots.py experiment_1/base_stats.csv --classification Single:/classification/single_linkage/base_stats.csv Complete:/classification/complete_linkage/base_stats.csv Distance_0.2:/classification/distance_0.2/base_stats.csv Distance_0.4:/classification/distance_0.4/base_stats.csv
+./summarize_plots.sh $directory_1 classification
 
 ## Experiment 2
 
