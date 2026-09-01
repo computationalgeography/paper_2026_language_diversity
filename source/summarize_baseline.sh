@@ -10,4 +10,3 @@ fi
 experiment_dir="$1"
 
 PYTHONPATH=source/package/ python environment/script/leco_summarized.py "${experiment_dir}/" --baseline
-PYTHONPATH=source/package/ python environment/script/summarized_plots.py "${experiment_dir}/base_stats.csv" --baseline
