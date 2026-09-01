@@ -1,12 +1,15 @@
 #!/bin/bash
 
-# Check if the directory argument is provided
-if [ "$#" -ne 1 ]; then
-    echo "Usage: $0 <experiment_directory>"
+if [ "$#" -ne 2 ]; then
+    echo "Usage: $0 <directory> <argument>"
     exit 1
 fi
 
-# Assign the argument to a variable
-experiment_dir="$1"
+# Assign the arguments to variables
+directory="$1"
+argument="$2"
 
-PYTHONPATH=source/package/ python environment/script/leco_summarized.py "${experiment_dir}/" --baseline
+if argument is none:
+    PYTHONPATH=source/package/ python environment/script/leco_summarized.py "${directory}/"
+else:
+    PYTHONPATH=source/package/ python environment/script/leco_summarized.py "${directory}/" --$argument
