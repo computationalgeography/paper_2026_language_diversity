@@ -15,12 +15,13 @@ for seed in seeds; do
 done
 
 # Analyze output
-./summarize_baseline.sh $directory_1
+./summarize_baseline.sh $directory_1 baseline
+./summarize_plots.sh $directory_1 baseline
 
 # Test alternative classification configurations
 alternatives=("single_linkage", "complete_linkage", "distance_0.2", "distance_0.4")
 for alt in alternatives; do
-  alt_dir=$output_dir/$alt
+  alt_dir=$output_dir/classification/$alt
   cp $directory_1 $alt_dir
 done
 
@@ -29,8 +30,14 @@ for seed in seeds; do
 done
 
 for alt in alternatives; do
-  alt_dir=$output_dir/$alt
-  ./summarize_baseline.sh $alt_dir
+  alt_dir=$output_dir/classification/$alt
+  ./summarize_baseline.sh $alt_dir baseline
+done
+
+PYTHONPATH=source/package/ python environment/script/summarized_plots.py experiment_1/base_stats.csv --classification Single:/classification/single_linkage/base_stats.csv Complete:/classification/complete_linkage/base_stats.csv Distance_0.2:/classification/distance_0.2/base_stats.csv Distance_0.4:/classification/distance_0.4/base_stats.csv
+
+## Experiment 2
+
 
 
 
