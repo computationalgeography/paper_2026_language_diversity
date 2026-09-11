@@ -6,7 +6,7 @@ This file contains the scripts and commands that were used to generate the resul
 
 ### Move to leco directory
 
-Put the path to the place where the `leco` repository is stored. This command is called in every bash script.
+Put the path to the place where the `leco` repository is stored. This command is called in every bash script. A submodule of `leco`  can be find within this repository.
 
 ```bash
 cd leco
@@ -133,7 +133,7 @@ To test for robustness to alternative classification configurations, we ran the 
 cd leco
 source lecoenv/bin/activate
 
-seeds=(42 43 44 45 46)
+seeds=(42,43,44,45,46)
 dir_path=/your_path_to_output/tracing_ld
 
 # Test alternative classification configurations
@@ -272,7 +272,7 @@ Every seed has an individual seed_$seed.toml and spawn_$seed.toml file, stored i
 cd leco
 source lecoenv/bin/activate
 
-seeds=(42 43 44 45 46)
+seeds=(42,43,44,45,46)
 dir_path=/your_path_to_output/tracing_ld
 workers=10
 
