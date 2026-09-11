@@ -1,0 +1,3 @@
+[submodule "leco"]
+	path = leco
+	url = https://github.com/computationalgeography/leco.git
