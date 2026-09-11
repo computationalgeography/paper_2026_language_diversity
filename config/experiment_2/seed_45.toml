@@ -1,0 +1,41 @@
+[initialization]
+agents = 1000
+steps = 4000
+seed = 45
+write_interval = 500
+nr_start_languages = 4
+
+[space]
+shape = [1000, 1000]
+
+[initialization_subset_area]
+present = false
+x_extent = [400,600]
+y_extent = [400,600]
+
+[barrier]
+present = false
+x_extent = [250, 450]
+y_extent = [0, 1000]
+impermeability = 0.6
+
+[movement]
+speed = 10
+
+[language]
+meanings = 100
+forms = 120
+mutation_rate = 0.00005
+
+[population_dynamics]
+death_rate = 0.0
+birth_rate = 0.0
+logistic_growth = false
+carrying_capacity = 1000
+end_growth_time = 50
+
+[interaction]
+radius = 50
+partner_proportion = 0.4
+diffusion_rate = 0.14
+similarity_preference = 0.6

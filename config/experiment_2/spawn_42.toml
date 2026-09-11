@@ -1,15 +1,15 @@
-# Regular Leco model configuration file
-configuration_file = "configuration_exp2.toml"
+# Regular Leco model configuration file to tweak
+configuration_file = "/scratch/depfg/posma002/paper1/config/experiment_2/seed_42.toml"
 
 # Template to use for generating output directory pathnames. All variable parameters must be mentioned.
-directory_pattern = "/experiment_2/speed_{speed}/mutation_rate_{mutation_rate}/radius_{radius}/diffusion_rate_{diffusion_rate}/similarity_preference_{similarity_preference}/seed_{seed}"
+directory_pattern = "/scratch/depfg/posma002/paper1/experiment_2/speed_{speed}/mutation_rate_{mutation_rate}/radius_{radius}/diffusion_rate_{diffusion_rate}/similarity_preference_{similarity_preference}/seed_{seed}"
 
 [sensitivity.run]
 # Section with settings for performing a sensitivity analysis
 method = "ofat" # One factor at a time
 
 [sensitivity.run.initialization]
-seed.range = [45, 46, 1]
+seed.range = [42, 43, 1]
 
 [sensitivity.run.movement]
 speed.range = [0, 32.5, 2.5]

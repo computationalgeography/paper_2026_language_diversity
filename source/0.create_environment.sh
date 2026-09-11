@@ -1,0 +1,12 @@
+#!/bin/bash
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
+
+cd leco
+
+python -m venv lecoenv
+source lecoenv/bin/activate
+pip install --upgrade pip
+pip install -r environment/configuration/requirements.txt
+pre-commit install

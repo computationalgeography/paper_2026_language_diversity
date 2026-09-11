@@ -1,7 +1,7 @@
 [initialization]
 agents = 1000
-steps = 3000
-seed = 42
+steps = 4000
+seed = 44
 write_interval = 500
 nr_start_languages = 4
 
@@ -28,8 +28,8 @@ forms = 120
 mutation_rate = 0.00005
 
 [population_dynamics]
-death_rate = 0.0002
-birth_rate = 0.0002
+death_rate = 0.0
+birth_rate = 0.0
 logistic_growth = false
 carrying_capacity = 1000
 end_growth_time = 50
